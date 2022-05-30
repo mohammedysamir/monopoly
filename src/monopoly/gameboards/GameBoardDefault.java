@@ -145,7 +145,7 @@ public class GameBoardDefault extends GameBoard {
      * @param rentPrice  : determine cell's rent price
      * @return PropertyCell object associated with sent parameters
      */
-    public PropertyCell initiatePropertyCell(int price, ColorGroup color, int housePrice, String Name, int rentPrice) {
+    private PropertyCell initiatePropertyCell(int price, ColorGroup color, int housePrice, String Name, int rentPrice) {
         PropertyCell propertyCell = new PropertyCell();
         propertyCell.setPrice(price);
         propertyCell.setColorGroup(color);
@@ -162,7 +162,7 @@ public class GameBoardDefault extends GameBoard {
      * @param cardName : determine card's Name
      * @return CardCell object with specified name and type
      */
-    public CardCell initiateCardCell(CardType cardType, String cardName) {
+    private CardCell initiateCardCell(CardType cardType, String cardName) {
         return new CardCell(cardType, cardName);
     }
 
@@ -172,7 +172,7 @@ public class GameBoardDefault extends GameBoard {
      * @param railRoadName: Determine cell's name
      * @return RailRoadCell object with specified name
      */
-    public RailRoadCell initiateRailRoadCell(String railRoadName) {
+    private RailRoadCell initiateRailRoadCell(String railRoadName) {
         RailRoadCell railRoadCell = new RailRoadCell();
         railRoadCell.setName(railRoadName);
         railRoadCell.setBaseRent(rrBaseRent);
